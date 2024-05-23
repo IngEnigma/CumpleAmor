@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:host {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+svg {
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+}
+
+.body {
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+div.cartaPrincipal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 500px;
+  height: 600px;
+  background-color: #1b1b1b;
+  border-radius: 10px;
+  margin: 10px;
+  position: relative; 
+}
+
+div.cartaIMG1,
+div.cartaIMG2,
+div.cartaIMG3,
+div.cartaIMG4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 290px; 
+  height: 390px; 
+  background-color: #1b1b1b;
+  border-radius: 10px;
+  margin: 10px;
+  position: absolute;
+}
+
+div.cartaIMG1 {
+  top: 30px;
+  left: 150px;
+}
+
+div.cartaIMG2 {
+  top: 30px;
+  right: 150px;
+}
+
+div.cartaIMG3 {
+  bottom: 30px;
+  left: 150px;
+}
+
+div.cartaIMG4 {
+  bottom: 30px;
+  right: 150px;
+}
+
+div.cartaIMG1 img,
+div.cartaIMG2 img,
+div.cartaIMG3 img,
+div.cartaIMG4 img {
+  width: 90%;
+  height: 90%;
+  border-radius: 10px;
+}
+
+h1 {
+  color: #e7e7e7;
+  font-size: 50px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #e7e7e7;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin: 20px;
+  text-align: justify;
+}
