@@ -19,24 +19,7 @@ p {
   font-size: 100px;
   font-weight: 700;
   color: #e7e7e7;
-  margin-top: 170px;
-  margin-bottom: 100px;
   text-align: center;
-  opacity: 1;
-  transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
-  transform: translateY(-20px);
-}
-
-button {
-  font-size: 20px;
-  font-weight: 700;
-  color: #e7e7e7;
-  background-color: #613583;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 50px;
-  cursor: pointer;
-  margin-left: 910px;
 }
 
 @keyframes fade {
@@ -44,28 +27,65 @@ button {
     opacity: 1;
   }
   50% {
-    opacity: 0.7;
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
   }
 }
 
-.animated-button {
-  font-size: 20px;
-  font-weight: 700;
-  color: #e7e7e7;
-  background-color: #613583;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 50px;
+.body-heart {
+  font-size: 1.2em;
+  font-size: 1.2em;
+  display: grid;
+  width: 150px;
+  height: 140px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-left: 860px;
   cursor: pointer;
-  animation: fade 2s infinite;
-  transition: transform 0.3s ease-in-out;
 }
 
-.animated-button:hover {
-  transform: scale(1.1);
+.heart{
+  --size: 80px;
+  --color: red;
+  transform:rotate(45deg);
+  animation:beat 1s infinite alternate ease-in-out;
+  cursor: pointer;
+}
+
+@keyframes beat{
+  to{
+  cursor: pointer;
+  transform: rotate(45deg) scale(1.05);
+  }
+}
+
+.heart,
+.heart::before,
+.heart::after{
+    cursor: pointer;
+    width: var(--size);
+    height: var(--size);
+    background:var(--color);
+}
+.heart::before,
+.heart::after{
+  cursor: pointer;
+  content:'';
+  display: block;
+  border-radius:50%;
+}
+.heart::before{
+  margin-top: calc(var(--size)*-.5);
+  cursor: pointer;
+}
+
+.heart::after{
+  margin-top: calc(var(--size)* -0.5);
+  cursor: pointer;
+  margin-left: calc(var(--size)* -0.5);
 }
 
 @keyframes firework {
@@ -241,12 +261,12 @@ button {
 .firework:nth-child(5),
 .firework:nth-child(5)::before,
 .firework:nth-child(5)::after {
-  --color1: red;
-  --color2: darkred;
-  --color3: crimson;
-  --color4: firebrick;
-  --color5: salmon;
-  --color6: tomato;
+  --color1: rgb(255, 0, 191);
+  --color2: rgb(139, 0, 104);
+  --color3: rgb(220, 20, 193);
+  --color4: rgb(178, 34, 154);
+  --color5: rgb(250, 114, 243);
+  --color6: rgb(255, 71, 255);
   --finalSize: 50vmin;
   left: 60%;
   top: 40%;
